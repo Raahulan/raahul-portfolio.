@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Raahulan Manokararasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="pcb-watermark"></div>
+
+  <div class="page">
+    <header>
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-logo">R</div>
+          <div class="brand-text">Raahulan&nbsp;Manokararasa</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="memberships.html">Memberships</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="projects">
+        <h2 class="section-title">
+          <span></span> Projects
+        </h2>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Smart ANPR Gate Access System</h3>
+            <h4>ESP32-CAM • Wi-Fi • Python • Motor Control</h4>
+            <small>2025</small>
+            <p>
+              Designed an automatic gate control system using ESP32-CAM for real-time number-plate
+              detection. Integrated Wi-Fi communication with a Python-based backend for image
+              recognition and gate motor control.
+            </p>
+            <div class="pill-row">
+              <span class="pill">ESP32-CAM</span>
+              <span class="pill">Computer Vision</span>
+              <span class="pill">Python</span>
+              <span class="pill">IoT</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Autonomous Line Following Robot</h3>
+            <h4>ATmega328P • L298N • C++</h4>
+            <small>2025</small>
+            <p>
+              Programmed an ATmega328P microcontroller to process sensor input and navigate using an
+              L298N motor driver. Implemented a PID-like control strategy to improve path tracking
+              accuracy and reduce overshoot.
+            </p>
+            <div class="pill-row">
+              <span class="pill">AVR</span>
+              <span class="pill">Motor Control</span>
+              <span class="pill">Robotics</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>IoT-Based Temperature &amp; Humidity Logger</h3>
+            <h4>ESP32 • DHT11 • ThingSpeak</h4>
+            <small>2024</small>
+            <p>
+              Built a real-time environment monitoring system using ESP32 and DHT11 sensor. Logged
+              environmental data to ThingSpeak cloud for visualization and basic analytics.
+            </p>
+            <div class="pill-row">
+              <span class="pill">ESP32</span>
+              <span class="pill">ThingSpeak</span>
+              <span class="pill">Cloud Logging</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Smart Energy Monitoring System</h3>
+            <h4>ESP32 • Power Sensors • Web Dashboard</h4>
+            <small>2024</small>
+            <p>
+              Developed an energy meter using current and voltage sensors with ESP32 to calculate
+              power usage. Displayed real-time consumption on a web dashboard for remote monitoring.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Energy Monitoring</span>
+              <span class="pill">Web UI</span>
+              <span class="pill">IoT</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp; CSS.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
