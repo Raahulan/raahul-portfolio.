@@ -9,10 +9,17 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
-
 <body>
+  <div id="loader">
+    <div class="loader-dot"></div>
+    <div class="loader-text">Booting portfolio…</div>
+  </div>
+
   <div class="pcb-watermark"></div>
 
   <div class="page">
@@ -39,30 +46,37 @@
     </header>
 
     <main>
-      <section>
+      <section class="fade-up">
         <h2 class="section-title">
           <span></span> About
         </h2>
         <p class="section-subtext">
-          I enjoy building smart, resource-efficient systems that connect sensors,
-          microcontrollers, and communication protocols to solve real problems.
+          I enjoy building smart, resource-efficient systems that connect
+          sensors, microcontrollers, and communication protocols to solve real
+          problems.
         </p>
         <p class="section-subtext">
-          I have hands-on experience with ESP32, Teensy, and ATmega-based systems,
-          integrating sensors, drivers, and wireless modules for control and monitoring
-          applications. I also work with PCB design, digital systems, and open-source
-          IC design tools.
+          As an Instrumentation &amp; Automation undergraduate, I focus on
+          embedded systems, IoT, and control applications. I have hands-on
+          experience with ESP32, Teensy and ATmega-based systems, integrating
+          sensors, drivers and wireless modules for monitoring and automation
+          projects. I also work with PCB design, digital electronics, and
+          open-source IC design tools.
         </p>
       </section>
     </main>
 
     <footer>
-      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp; CSS.
+      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp;
+      CSS.
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
   </script>
 </body>
 </html>

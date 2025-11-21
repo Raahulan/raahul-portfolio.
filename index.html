@@ -2,17 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Raahulan Manokararasa | Embedded Systems Designer</title>
+  <title>Home | Raahulan Manokararasa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
-
 <body>
+  <div id="loader">
+    <div class="loader-dot"></div>
+    <div class="loader-text">Booting portfolio…</div>
+  </div>
+
   <div class="pcb-watermark"></div>
 
   <div class="page">
@@ -39,14 +46,20 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero fade-up-slow">
         <div class="hero-inner">
           <div class="profile-photo-wrapper">
-            <img src="profile.png" alt="Raahulan Manokararasa" class="profile-photo" />
+            <img
+              src="profile.png"
+              alt="Raahulan Manokararasa"
+              class="profile-photo"
+              loading="lazy"
+            />
           </div>
 
           <h1 class="hero-heading">
-            <span id="type-prefix"></span><span id="type-name" class="accent-name"></span>
+            <span id="type-prefix"></span
+            ><span id="type-name" class="accent-name"></span>
           </h1>
 
           <div class="hero-subtitle">
@@ -54,28 +67,48 @@
           </div>
 
           <p class="hero-summary">
-            Focused on embedded systems design, IoT, and real-time control using microcontrollers
-            and sensors. Experienced with ATmega328P, ESP32, sensor interfacing, motor control,
-            and wireless communication. Seeking an embedded systems internship to contribute to
-            real-world automation projects.
+            Focused on embedded systems design, IoT, and real-time control using
+            microcontrollers and sensors. Experienced with ATmega328P, ESP32,
+            sensor interfacing, motor control, and wireless communication.
+            Seeking an embedded systems internship to contribute to real-world
+            automation projects.
           </p>
 
           <div class="hero-socials">
-            <a href="https://linkedin.com/in/raahulan-rk" target="_blank" rel="noreferrer" title="LinkedIn" class="social-icon">
+            <a
+              href="https://linkedin.com/in/raahulan-rk"
+              target="_blank"
+              rel="noreferrer"
+              title="LinkedIn"
+              class="social-icon"
+            >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/Raahulan" target="_blank" rel="noreferrer" title="GitHub" class="social-icon">
+            <a
+              href="https://github.com/Raahulan"
+              target="_blank"
+              rel="noreferrer"
+              title="GitHub"
+              class="social-icon"
+            >
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="mailto:raahulanm@gmail.com" title="Email" class="social-icon">
+            <a
+              href="mailto:raahulanm@gmail.com"
+              title="Email"
+              class="social-icon"
+            >
               <i class="fa-solid fa-envelope"></i>
             </a>
           </div>
 
           <div class="hero-actions">
-            <a class="btn btn-primary"
-               href="https://drive.google.com/"
-               target="_blank" rel="noreferrer">
+            <a
+              class="btn btn-primary"
+              href="https://drive.google.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               ⬇ View / Download CV
             </a>
             <a class="btn btn-outline" href="projects.html">
@@ -90,14 +123,14 @@
     </main>
 
     <footer>
-      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp; CSS.
+      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp;
+      CSS.
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // typewriter
     const prefix = "Hi, I'm ";
     const nameText = "Raahulan Manokararasa";
     const prefixEl = document.getElementById("type-prefix");
@@ -110,16 +143,17 @@
         const current = fullText.slice(0, index);
         const prefixPart = current.slice(0, prefix.length);
         const namePart = current.slice(prefix.length);
-
         prefixEl.textContent = prefixPart;
         nameEl.textContent = namePart;
-
         index++;
         setTimeout(typeHeading, 130);
       }
     }
 
-    window.addEventListener("load", typeHeading);
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+      typeHeading();
+    });
   </script>
 </body>
 </html>

@@ -9,10 +9,17 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
-
 <body>
+  <div id="loader">
+    <div class="loader-dot"></div>
+    <div class="loader-text">Booting portfolio…</div>
+  </div>
+
   <div class="pcb-watermark"></div>
 
   <div class="page">
@@ -39,7 +46,7 @@
     </header>
 
     <main>
-      <section id="projects">
+      <section id="projects" class="fade-up">
         <h2 class="section-title">
           <span></span> Projects
         </h2>
@@ -50,9 +57,10 @@
             <h4>ESP32-CAM • Wi-Fi • Python • Motor Control</h4>
             <small>2025</small>
             <p>
-              Designed an automatic gate control system using ESP32-CAM for real-time number-plate
-              detection. Integrated Wi-Fi communication with a Python-based backend for image
-              recognition and gate motor control.
+              Designed an automatic gate control system using ESP32-CAM for
+              real-time number-plate detection. Integrated Wi-Fi communication
+              with a Python-based backend for image recognition and gate motor
+              control.
             </p>
             <div class="pill-row">
               <span class="pill">ESP32-CAM</span>
@@ -67,9 +75,10 @@
             <h4>ATmega328P • L298N • C++</h4>
             <small>2025</small>
             <p>
-              Programmed an ATmega328P microcontroller to process sensor input and navigate using an
-              L298N motor driver. Implemented a PID-like control strategy to improve path tracking
-              accuracy and reduce overshoot.
+              Programmed an ATmega328P microcontroller to process sensor input
+              and navigate using an L298N motor driver. Implemented a PID-like
+              control strategy to improve path tracking accuracy and reduce
+              overshoot.
             </p>
             <div class="pill-row">
               <span class="pill">AVR</span>
@@ -83,8 +92,9 @@
             <h4>ESP32 • DHT11 • ThingSpeak</h4>
             <small>2024</small>
             <p>
-              Built a real-time environment monitoring system using ESP32 and DHT11 sensor. Logged
-              environmental data to ThingSpeak cloud for visualization and basic analytics.
+              Built a real-time environment monitoring system using ESP32 and
+              DHT11 sensor. Logged environmental data to ThingSpeak cloud for
+              visualization and basic analytics.
             </p>
             <div class="pill-row">
               <span class="pill">ESP32</span>
@@ -98,8 +108,9 @@
             <h4>ESP32 • Power Sensors • Web Dashboard</h4>
             <small>2024</small>
             <p>
-              Developed an energy meter using current and voltage sensors with ESP32 to calculate
-              power usage. Displayed real-time consumption on a web dashboard for remote monitoring.
+              Developed an energy meter using current and voltage sensors with
+              ESP32 to calculate power usage. Displayed real-time consumption on
+              a web dashboard for remote monitoring.
             </p>
             <div class="pill-row">
               <span class="pill">Energy Monitoring</span>
@@ -112,12 +123,16 @@
     </main>
 
     <footer>
-      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp; CSS.
+      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp;
+      CSS.
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
   </script>
 </body>
 </html>

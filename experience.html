@@ -9,10 +9,17 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
-
 <body>
+  <div id="loader">
+    <div class="loader-dot"></div>
+    <div class="loader-text">Booting portfolio…</div>
+  </div>
+
   <div class="pcb-watermark"></div>
 
   <div class="page">
@@ -39,7 +46,7 @@
     </header>
 
     <main>
-      <section id="experience">
+      <section id="experience" class="fade-up">
         <h2 class="section-title">
           <span></span> Relevant Experience
         </h2>
@@ -49,21 +56,34 @@
           <h4>Sri Lanka Transport Board (KMN Depot)</h4>
           <small>2023 · 6 months</small>
           <ul class="list-bullets">
-            <li>Worked with automotive electronic and mechanical systems in buses and vehicles.</li>
-            <li>Assisted in maintenance and troubleshooting of systems connected to sensors and control units.</li>
-            <li>Gained practical exposure to integrating mechanical and embedded knowledge in real-world environments.</li>
+            <li>
+              Worked with automotive electronic and mechanical systems in buses
+              and vehicles.
+            </li>
+            <li>
+              Assisted in maintenance and troubleshooting of systems connected
+              to sensors and control units.
+            </li>
+            <li>
+              Gained practical exposure to integrating mechanical and embedded
+              knowledge in real-world environments.
+            </li>
           </ul>
         </article>
       </section>
     </main>
 
     <footer>
-      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp; CSS.
+      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp;
+      CSS.
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
   </script>
 </body>
 </html>

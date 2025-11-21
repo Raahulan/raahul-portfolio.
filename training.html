@@ -9,10 +9,17 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
-
 <body>
+  <div id="loader">
+    <div class="loader-dot"></div>
+    <div class="loader-text">Booting portfolio…</div>
+  </div>
+
   <div class="pcb-watermark"></div>
 
   <div class="page">
@@ -39,7 +46,7 @@
     </header>
 
     <main>
-      <section id="certifications">
+      <section id="certifications" class="fade-up">
         <h2 class="section-title">
           <span></span> Training &amp; Certifications
         </h2>
@@ -67,12 +74,16 @@
     </main>
 
     <footer>
-      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp; CSS.
+      &copy; <span id="year"></span> Raahulan Manokararasa. Built with HTML &amp;
+      CSS.
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
   </script>
 </body>
 </html>

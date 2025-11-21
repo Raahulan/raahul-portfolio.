@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page Not Found | Raahulan Manokararasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-dot"></div>
+    <div class="loader-text">Booting portfolio…</div>
+  </div>
+
+  <div class="pcb-watermark"></div>
+
+  <div class="page">
+    <header>
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-logo">R</div>
+          <div class="brand-text">Raahulan&nbsp;Manokararasa</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="fade-up">
+        <h2 class="section-title">
+          <span></span> 404 – Not Found
+        </h2>
+        <p class="section-subtext">
+          The page you’re looking for doesn’t exist or the link is outdated.
+        </p>
+        <a class="btn btn-primary" href="index.html">⬅ Back to Home</a>
+      </section>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> Raahulan Manokararasa.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
+</body>
+</html>
